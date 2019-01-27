@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
-    var index = 0
-    // Code below executes when the app's view first loads!
+    var index = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,7 +27,14 @@ class ViewController: UIViewController {
                         "You Are Amazing!",
                         "You GOT THIS!"]
         
-        messageLabel.text = messages.randomElement()!
+        var newIndex = -1
+        
+        repeat {
+            newIndex = Int.random(in: 0..<messages.count)
+        } while index == newIndex
+        
+        index = newIndex
+        messageLabel.text = messages[index]
     }
     
 }
