@@ -18,16 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-ql-08R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDa-ql-08R">
                                 <rect key="frame" x="16" y="44" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ytc-nb-cHA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="33"/>
                                 <color key="textColor" red="0.10369378649832391" green="0.53778740284974103" blue="0.50644357211420576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pZ-AE-BuS">
-                                <rect key="frame" x="129" y="152" width="117" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="kCW-1a-VQL">
+                                <rect key="frame" x="16" y="190" width="343" height="550"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pZ-AE-BuS">
+                                <rect key="frame" x="100" y="152" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qJC-kb-Bvp"/>
+                                    <constraint firstAttribute="width" constant="175" id="uDf-Vu-0G2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
@@ -36,6 +44,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77349501688766831" green="0.94763289195599343" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jDa-ql-08R" secondAttribute="trailing" constant="16" id="57b-ol-wRu"/>
+                            <constraint firstItem="5pZ-AE-BuS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BuR-xh-XoM"/>
+                            <constraint firstItem="jDa-ql-08R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J5s-4v-E7n"/>
+                            <constraint firstItem="jDa-ql-08R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NBp-I6-0p7"/>
+                            <constraint firstItem="kCW-1a-VQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QvT-0J-L8C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kCW-1a-VQL" secondAttribute="bottom" constant="38" id="eXx-kQ-nen"/>
+                            <constraint firstItem="kCW-1a-VQL" firstAttribute="top" secondItem="5pZ-AE-BuS" secondAttribute="bottom" constant="8" id="eiw-6R-SwN"/>
+                            <constraint firstItem="5pZ-AE-BuS" firstAttribute="top" secondItem="jDa-ql-08R" secondAttribute="bottom" constant="8" id="ejc-BH-XVA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kCW-1a-VQL" secondAttribute="trailing" constant="16" id="zkh-Ze-09X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -47,4 +66,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>
